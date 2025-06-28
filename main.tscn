@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c52pmehs26blj"]
+
+[sub_resource type="Environment" id="Environment_7dm0k"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_ig7tw"]
+
+[node name="Main" type="Node"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7dm0k")
+camera_attributes = SubResource("CameraAttributesPractical_ig7tw")
