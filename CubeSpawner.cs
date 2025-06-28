@@ -10,7 +10,7 @@ public partial class CubeSpawner : Node3D
 	{
 		if (@event.IsActionPressed("ui_accept"))
 		{
-			GD.Print("Spawning Cube");
+			GD.Print("Spawning Cube!!!");
 
 			if (CubeScene == null)
 			{
@@ -19,8 +19,10 @@ public partial class CubeSpawner : Node3D
 			}
 
 			Node3D newCube = (Node3D)CubeScene.Instantiate();
-
 			AddChild(newCube);
+            
+            GD.Print("SUCCESS: Node added. Path is: " + newCube.GetPath());
+            
 		}
 	}
 
