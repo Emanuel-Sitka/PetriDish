@@ -9,9 +9,8 @@ public static class SegmentMeshFactory
     private static int _rings_per_segment = 9;
 
 
-    private static float[] CalculateRingZPositions(SegmentGenome genome, float bulgeRadius)
+    public static float[] CalculateRingZPositions(SegmentGenome genome, float bulgeRadius)
     {
-        
         var startToBulgeDistance = genome.Length * float.Sqrt(bulgeRadius *  bulgeRadius - genome.StartRadius * genome.StartRadius)
                                    / (float.Sqrt(bulgeRadius *  bulgeRadius - genome.StartRadius * genome.StartRadius) 
                                       +  float.Sqrt(bulgeRadius *  bulgeRadius - genome.EndRadius * genome.EndRadius)); 
@@ -32,7 +31,8 @@ public static class SegmentMeshFactory
         for (var i = 1; i < inBetweenRingsPerSegmentHalf + 1; i++)
         {
             zPositionPerRing[i] = zPositionPerRing[0] - startToBulgeStep * i;
-            zPositionPerRing[_rings_per_segment - 1 - i] = zPositionPerRing[_rings_per_segment - 1] + endToBulgeStep * i
+            zPositionPerRing[_rings_per_segment - 1 - i] =
+                zPositionPerRing[_rings_per_segment - 1] + endToBulgeStep * i;
         }
 
         return zPositionPerRing;
@@ -61,5 +61,7 @@ public static class SegmentMeshFactory
         // TODO: Implement procedural mesh generation based on gene parameters
         var surface_tool = new SurfaceTool();
         surface_tool.Begin(Mesh.PrimitiveType.Triangles);
+
+        return new ArrayMesh();
     }
 }
