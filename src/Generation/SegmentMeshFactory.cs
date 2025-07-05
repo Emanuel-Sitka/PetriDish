@@ -9,7 +9,7 @@ public static class SegmentMeshFactory
     private static int _rings_per_segment = 9;
 
 
-    public static float[] CalculateRingZPositions(SegmentGenome genome, float bulgeRadius)
+    pdublic static float[] CalculateRingZPositions(SegmentGenome genome, float bulgeRadius)
     {
         var startToBulgeDistance = genome.Length * float.Sqrt(bulgeRadius *  bulgeRadius - genome.StartRadius * genome.StartRadius)
                                    / (float.Sqrt(bulgeRadius *  bulgeRadius - genome.StartRadius * genome.StartRadius) 
