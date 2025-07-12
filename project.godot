@@ -11,10 +11,18 @@ config_version=5
 [application]
 
 config/name="PetriDish"
-run/main_scene="uid://c52pmehs26blj"
+run/main_scene="res://src/Menu.tscn"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="PetriDish"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdUnit4/plugin.cfg")
+
+[gdunit4]
+
+settings/test/test_discovery=true
