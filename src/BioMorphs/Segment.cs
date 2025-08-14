@@ -8,7 +8,7 @@ using Godot;
 
 [Tool]
 [GlobalClass]
-public partial class ProceduralSegment : MeshInstance3D
+public partial class Segment : MeshInstance3D
 {
     [Export] public float Length { get; set; }
     [Export] public float StartRadius { get; set; }
