@@ -29,11 +29,11 @@ public partial class Biomorph : Node3D
 
         foreach (var segmentGenome in Genome.SpineSegmentGenomes)
         {
-            var segment =  new Segment()
-                {Length = segmentGenome.Length, 
-                    StartRadius = segmentGenome.StartRadius,  
-                    EndRadius = segmentGenome.EndRadius, 
-                    MidBulge = segmentGenome.MidBulge};
+            var segment = (Segment)SegmentScene.Instantiate();
+            segment.Length = segmentGenome.Length;
+            segment.StartRadius = segmentGenome.StartRadius;
+            segment.EndRadius = segmentGenome.EndRadius;
+            segment.MidBulge = segmentGenome.MidBulge;
 
             var currentAttachmentPoint =
                 new Transform3D().Translated(new Vector3(0f, 0f, frontEndOfRemainingSpine - segment.Length / 2));
