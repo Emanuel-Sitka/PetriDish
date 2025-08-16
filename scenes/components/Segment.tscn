@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://5ofxe0kqqx5x"]
+
+[ext_resource type="Script" uid="uid://nbrr2njivv75" path="res://src/BioMorphs/Segment.cs" id="1_5ey1b"]
+
+[node name="Segment" type="MeshInstance3D"]
+script = ExtResource("1_5ey1b")
