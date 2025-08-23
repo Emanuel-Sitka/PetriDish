@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://kjigjp45a16p"]
+
+[ext_resource type="Script" uid="uid://cwjsukjjn201b" path="res://src/BioMorphs/Biomorph.cs" id="1_v3hsg"]
+[ext_resource type="PackedScene" uid="uid://5ofxe0kqqx5x" path="res://scenes/components/Segment.tscn" id="2_ac4lc"]
+
+[node name="Biomorph" type="Node3D"]
+script = ExtResource("1_v3hsg")
+SegmentScene = ExtResource("2_ac4lc")

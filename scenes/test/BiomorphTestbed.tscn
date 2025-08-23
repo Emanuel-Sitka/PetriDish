@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://mfb6toggohk8"]
+
+[ext_resource type="PackedScene" uid="uid://kjigjp45a16p" path="res://scenes/components/Biomorph.tscn" id="1_t64wm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vxov8"]
+
+[sub_resource type="Sky" id="Sky_t64wm"]
+sky_material = SubResource("ProceduralSkyMaterial_vxov8")
+
+[sub_resource type="Environment" id="Environment_cvbue"]
+background_mode = 2
+sky = SubResource("Sky_t64wm")
+ambient_light_color = Color(1, 1, 1, 1)
+
+[node name="BiomorphTestbed" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cvbue")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-4.37114e-08, -0.5, 0.866025, 0, 0.866025, 0.5, -1, 2.18557e-08, -3.78552e-08, 9.897, 4, 0)
+
+[node name="Biomorph" parent="." instance=ExtResource("1_t64wm")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.866025, 0.383022, -0.321394, 0, 0.642788, 0.766044, 0.5, -0.663414, 0.55667, 0, 0, 0)
